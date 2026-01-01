@@ -132,3 +132,57 @@ input, textarea, select{
 }
 textarea{min-height:130px; resize:vertical}
 small.note{color:var(--muted)}
+/* Premium single sticky CTA strip (mobile only) */
+.sticky-cta{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  padding:10px 12px;
+  background:rgba(255,255,255,.92);
+  border-top:1px solid var(--border);
+  backdrop-filter:saturate(180%) blur(10px);
+  display:flex;
+  gap:10px;
+}
+
+.sticky-cta .btn{
+  flex:1;
+  padding:13px 14px;
+  font-weight:800;
+}
+
+@media(min-width:840px){
+  .sticky-cta{display:none}
+}
+
+/* Give the page breathing room so content doesn't hide behind sticky CTA */
+body{ padding-bottom:72px; }
+@media(min-width:840px){
+  body{ padding-bottom:0; }
+}
+.micro-note{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-weight:700;
+  font-size:14px;
+}
+
+.trust-bar{
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  color:var(--muted);
+  font-weight:750;
+  font-size:13px;
+}
+
+.trust-bar .dot{
+  opacity:.6;
+}
+/* Prevent header CTA wrapping on small screens */
+.nav-cta{ white-space:nowrap; }
+
+@media (max-width: 839px){
+  .nav-cta{ display:none; } /* sticky CTA handles mobile conversions */
+}
