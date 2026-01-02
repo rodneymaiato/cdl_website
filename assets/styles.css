@@ -25,6 +25,7 @@ body{
 
   /* breathing room so content doesn't hide behind sticky CTA (mobile) */
   padding-bottom:72px;
+  overflow-x:hidden;
 }
 
 @media(min-width:840px){
@@ -241,9 +242,10 @@ small.note{color:var(--muted)}
   font-weight:800;
 }
 
-@media(min-width:840px){
-  .sticky-cta{display:none}
+@media (max-width: 960px){
+  .nav-cta{ display:none; }
 }
+
 @media (max-width: 380px){
   .links{ gap:8px; }
   .links a{ padding:10px 8px; }
